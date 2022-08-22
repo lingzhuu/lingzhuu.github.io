@@ -50,7 +50,7 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - *2021.08 - 2022.08 (now)*, M.S.E. in Biomedical Engineering, Johns Hokins University. 
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University. 
 
-# Projects
+# :video_camera:Projects
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
 
