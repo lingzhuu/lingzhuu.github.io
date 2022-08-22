@@ -43,9 +43,9 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🏆 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
+- *2021.10* Zhejiang University Scholarship. 
+<!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+ -->
 # 🎓 Educations
 - *2021.08 - 2022.08 (now)*, M.S.E. in Biomedical Engineering, Johns Hokins University. 
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University. 
