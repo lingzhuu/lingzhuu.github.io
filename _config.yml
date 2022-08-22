@@ -21,9 +21,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
+  name             : "Lingzhu Shen"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
+  bio              : "Johns Hopkins University"
   location         : "Baltimore, US"
   employer         :
   pubmed           : 
@@ -32,7 +32,7 @@ author:
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "zhuzhusleepearly"
   google_plus      :
   instagram        :
   linkedin         : # e.g., "linkedin username"
