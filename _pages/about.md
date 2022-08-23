@@ -47,7 +47,7 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University. 
  
 # 🎨 Projects
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2021.04*, Develop an automated method to identify specific clinical concepts in patient notes. Used pre-trained deep learning models such as Bert, RoBERTa and  DeBERTa to perform token classification task. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
  
 # 🏢 Internships
