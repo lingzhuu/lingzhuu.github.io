@@ -48,7 +48,7 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
  
 # 🎨 Projects
 - *2022.04*, Developed an automated method to map clinical concepts in exam rubric to various ways in which these concepts are expressed in clinical patient notes written by medical students. Pre-trained deep learning models such as Bert, RoBERTa and  DeBERTa are used to perform token classification task. This model can identify identify specific clinical concepts in patient notes from medical licensing exams with an F-score of 83%.
-- *2022.04*, Used machine learning techniques to analyze gene expression level measured across tumor and normal colon tissues. \| [\[video\]](https://github.com/)
+- *2022.04*, Engineered Cardiomyocytes(CM) analysis using scRNA-seq data([repo](https://github.com/zhuzhusleepearly/)), it is the final project of Computational Stem Cell Biology. Used pySCN to measure the purity of Engineered CM and shannon entropy values to measure the maturity of Engineered CM. Used CellOracle to investigate what transcription factors that they could overexpress or knock out to drive the maturation of cardiomyocytes. \| [\[video\]](https://github.com/)
  
 # 🏢 Internships
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  
