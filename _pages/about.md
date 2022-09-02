@@ -47,7 +47,8 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University. 
 
 # 🧬 Research
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  
+- *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, supervied by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
+
  
 # 🎨 Projects
 - *2022.05*, Establish a prediction model which allow Hepatitis prediction for new variants of a patient, it is the final project of Data Science for Public Health. Used machine learning algorithms such as logistic regression, random forests, support vector machine to build the model and conducteded a prediction web app. \| [\[video\]](https://drive.google.com/file/d/1GxdAijcPeJvuHQzMjPOBG1wMG3GcMPDg/view?usp=sharing)
@@ -59,8 +60,8 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 changes, visual comparison of time network, etc.
 
  
-# 🏢 Internships
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  
+<!-- # 🏢 Internships
+- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.   -->
 
 # 🏆 Honors and Awards
 - *2021.10* Zhejiang University Scholarship. 
