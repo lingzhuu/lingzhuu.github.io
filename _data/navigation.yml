@@ -10,14 +10,16 @@ main:
   - title: "Educations"
     url: "/#-educations"
     
+    
+  - title: "Researchs"
+    url: "/#-researchs"
+    
   - title: "Projects"
     url: "/#-projects"
 
 #   - title: "Publications"
 #     url: "/#-publications"
 
-  - title: "Researchs"
-    url: "/#-researchs"
 
 #   - title: "Internships"
 #     url: "/#-internships"
