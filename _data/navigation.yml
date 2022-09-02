@@ -11,8 +11,8 @@ main:
     url: "/#-educations"
     
     
-  - title: "Researchs"
-    url: "/#-researchs"
+  - title: "Research"
+    url: "/#-research"
     
   - title: "Projects"
     url: "/#-projects"
