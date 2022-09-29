@@ -43,10 +43,11 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎓 Educations
-- *2021.08 - 2022.08 (now)*, M.S.E. in Biomedical Engineering, Johns Hokins University. 
+- *2021.08 - 2023.05 (expected)*, M.S.E. in Biomedical Engineering, Johns Hokins University. 
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University. 
 
 # 🧬 Research
+- *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, supervied by Prof. [Ryan Roemmich]([https://person.zju.edu.cn/en/pandafengye](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich)).
 - *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, supervied by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
 
  
