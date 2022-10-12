@@ -42,8 +42,10 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎓 Educations
-- *2021.08 - 2023.05 (expected)*, M.S.E. in Biomedical Engineering, Johns Hokins University. 
+- *2021.08 - 2023.05 (expected)*, M.S.E. in Biomedical Engineering, Johns Hokins University.
+  Coursework: Biomedical Data Science, Introduction to Data Science, Statistical Learning For Engineers, Computational Stem Cell Biology, Machine Learning for Medical Applications, Computational Molecular Medicine, Advanced Methods for Statistical Genetics and Genomics 
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University. 
+  Coursework: Calculus, Linear algebra, Probability Theory and Mathematical Statistics, Ordinary Differential Equation, C Programming, Genetics, Immunology, Biostatistics and experimental design, Bioinformatics, Systems biology
 
 # 🧬 Research
 - *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich]([https://person.zju.edu.cn/en/pandafengye](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich)).
