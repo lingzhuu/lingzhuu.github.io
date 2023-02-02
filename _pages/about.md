@@ -50,7 +50,7 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 # 🧬 Research
 - *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
 - *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, superviced by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
-- *2018.10 - 2020.10*,  Research intern at The Sperm Laboratory at Zhejiang University, superviced by Prof. [Wan-Xi Yang] (http://www.spermlab.org/)
+- *2018.10 - 2020.10*,  Research intern at The Sperm Laboratory at Zhejiang University, superviced by Prof. [Wan-Xi Yang](http://www.spermlab.org/)
 
  
 # 🎨 Projects
