@@ -25,9 +25,9 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - *2021.08*: &nbsp; . 
 - *2021.06*: &nbsp; Graduated from Zhejiang University.  -->
 
-<!-- # 📝 Publications 
+# 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
@@ -37,9 +37,11 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 </div>
-</div>
+</div> -->
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
+<!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
+
+*De novo* assembly of *C. difficle* genomes using enhanced Next Generation Sequencing technology. (Preparation)
 
 # 🎓 Educations
 - *2021.08 - 2023.05 (expected)*, M.S.E. in Biomedical Engineering, Johns Hokins University.  
@@ -63,8 +65,8 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 changes, visual comparison of time network, etc.
 
  
-<!-- # 🏢 Internships
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.   -->
+# 🏢 Internships
+- *2022.11 - now*, Advanced Institute of Information Technology, Peking University. Assembled Illumina, TELL-Seq and Nanopore genomes of different subtypes of C. difficile, and compare the sequencing results using MUMmer. Developed workflow for downstream analysis of sequencing, including non-coding RNA prediction, gene annotation and circos plot, and deployed it through Docker. Aimed to use the TELL-Seq to construct a phylogeny tree of C. difficile based on whole genome information. 
 
 # 🏆 Honors and Awards
 - *2021.10* Zhejiang University Scholarship. 
