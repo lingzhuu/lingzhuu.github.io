@@ -17,12 +17,12 @@ main:
   - title: "Projects"
     url: "/#-projects"
 
-#   - title: "Publications"
-#     url: "/#-publications"
+  - title: "Publications"
+    url: "/#-publications"
 
 
-#   - title: "Internships"
-#     url: "/#-internships"
+  - title: "Internships"
+    url: "/#-internships"
 
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
