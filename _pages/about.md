@@ -25,6 +25,17 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 - *2021.08*: &nbsp; . 
 - *2021.06*: &nbsp; Graduated from Zhejiang University.  -->
 
+# 🎓 Educations
+- *2021.08 - 2023.05 (expected)*, M.S.E. in Biomedical Engineering, Johns Hokins University.  
+  Coursework: Biomedical Data Science, Introduction to Data Science, Statistical Learning For Engineers, Computational Stem Cell Biology, Machine Learning for Medical Applications, Computational Molecular Medicine, Advanced Methods for Statistical Genetics and Genomics 
+- *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University.   
+  Coursework: Calculus, Linear algebra, Probability Theory and Mathematical Statistics, Ordinary Differential Equation, C Programming, Genetics, Immunology, Biostatistics and experimental design, Bioinformatics, Systems biology
+
+# 🧬 Research
+- *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
+- *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, superviced by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
+- *2018.10 - 2020.10*,  Research intern at [The Sperm Laboratory at Zhejiang University](http://www.spermlab.org/), superviced by Prof. [Wan-Xi Yang](https://mypage.zju.edu.cn/spermlab)
+
 # 📝 Publications 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
@@ -42,18 +53,6 @@ I am a current master student in Biomedical Engineering at Johns Hopkins Univers
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 *De novo* assembly of *C. difficle* genomes using enhanced Next Generation Sequencing technology. (Preparation)
-
-# 🎓 Educations
-- *2021.08 - 2023.05 (expected)*, M.S.E. in Biomedical Engineering, Johns Hokins University.  
-  Coursework: Biomedical Data Science, Introduction to Data Science, Statistical Learning For Engineers, Computational Stem Cell Biology, Machine Learning for Medical Applications, Computational Molecular Medicine, Advanced Methods for Statistical Genetics and Genomics 
-- *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University.   
-  Coursework: Calculus, Linear algebra, Probability Theory and Mathematical Statistics, Ordinary Differential Equation, C Programming, Genetics, Immunology, Biostatistics and experimental design, Bioinformatics, Systems biology
-
-# 🧬 Research
-- *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
-- *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, superviced by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
-- *2018.10 - 2020.10*,  Research intern at [The Sperm Laboratory at Zhejiang University](http://www.spermlab.org/), superviced by Prof. [Wan-Xi Yang](https://mypage.zju.edu.cn/spermlab)
-
  
 # 🎨 Projects
 - *2023.05*, A pipeline to better infer the true location of multi-mapped reads. Developed a pipeline that distributes multi-mapped reads to loci with higher coverage and investigated how the redistribution of multi-mapped reads affects the accuracy of StringTie to assemble transcripts.
