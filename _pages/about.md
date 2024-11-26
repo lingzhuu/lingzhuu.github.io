@@ -17,13 +17,12 @@ redirect_from:
  -->
 <span class='anchor' id='about-me'></span>
 
-I am a current first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University. My research interests focus on the development of multi-omics data analysis methods, and their practical applications in the real world.
+I am a current first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University, under the supervision of Dr. [Hao Feng]([https://person.zju.edu.cn/en/pandafengye](https://hfenglab.org)). My research interests focus on the development of multi-omics data analysis methods, and their practical applications in the real world. 
 <!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
 
 
 <!-- # 🔥 News
-- *2021.08*: &nbsp; . 
-- *2021.06*: &nbsp; Graduated from Zhejiang University.  -->
+- *2024.08*: &nbsp; . -->
 
 # 🎓 Educations
 - *2024.08 - now*, Ph.D. in Biomedical and Health Informatics, Case Western Reserve University.  
@@ -32,9 +31,9 @@ I am a current first-year Ph.D. student in Biomedical and Health Informatics at 
 
 # 🧬 Research
 <!-- - *2024.08 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).  -->
-- *2022.09 - 2023.06*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
-- *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, superviced by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
-- *2018.10 - 2020.10*,  Research intern at [The Sperm Laboratory at Zhejiang University](http://www.spermlab.org/), superviced by Prof. [Wan-Xi Yang](https://mypage.zju.edu.cn/spermlab)
+- *2022.09 - 2023.06*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Dr. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
+- *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, superviced by Dr. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
+- *2018.10 - 2020.10*,  Research intern at [The Sperm Laboratory at Zhejiang University](http://www.spermlab.org/), superviced by Dr. [Wan-Xi Yang](https://mypage.zju.edu.cn/spermlab)
 
 # 📝 Publications 
 
