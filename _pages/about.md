@@ -63,11 +63,11 @@ changes, visual comparison of time network, etc. --->
  
 # 🏢 Internships
 - *2022.11 - 2023. 11*, Advanced Institute of Information Technology, Peking University.
-<!-- - Assembled Illumina, TELL-Seq and Nanopore assembly of different subtypes of C. difficile, and compare the results.
-   - Developed analysis workflow and deployed it through Docker.
-   - Construct a phylogeny tree of C. difficile based on whole genome information. -->
 
 # 🏆 Honors and Awards
 - *2021.10* Zhejiang University Scholarship. 
 <!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- Assembled Illumina, TELL-Seq and Nanopore assembly of different subtypes of C. difficile, and compare the results.
+   - Developed analysis workflow and deployed it through Docker.
+   - Construct a phylogeny tree of C. difficile based on whole genome information.
  -->
