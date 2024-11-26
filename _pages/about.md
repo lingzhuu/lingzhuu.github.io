@@ -28,9 +28,7 @@ I am a current first-year Ph.D. student in Biomedical and Health Informatics at 
 # 🎓 Educations
 - *2024.08 - now*, Ph.D. in Biomedical and Health Informatics, Case Western Reserve University.  
 - *2021.08 - 2023.05*, M.S.E. in Biomedical Engineering, Johns Hokins University.  
-  Coursework: Biomedical Data Science, Introduction to Data Science, Statistical Learning For Engineers, Computational Stem Cell Biology, Machine Learning for Medical Applications, Computational Molecular Medicine, Computing the Transcriptome, Foundations of Computational Biology and Bioinformatics 
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University.   
-  Coursework: Calculus, Linear algebra, Probability Theory and Mathematical Statistics, C Programming, Genetics, Molecular biology, Biostatistics and experimental design, Bioinformatics, Systems biology
 
 # 🧬 Research
 - *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
@@ -53,18 +51,20 @@ I am a current first-year Ph.D. student in Biomedical and Health Informatics at 
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
-*De novo* assembly of *C. difficle* genomes using enhanced Next Generation Sequencing technology. (Preparation)
+Transposase Enzyme-Linked Long-reads Sequencing technology produces inexpensive near-complete genomes and provides higher-resolution epidemiological and phylogenetical insights in an extremely GC-biased bacterial pathogen  (In preparation)
  
-# 🎨 Projects
-- *2022.11*, Single-cell DNA and protein expression prediction, it is the open kaggle competition. Built sparse matrices based on data from two different sequencing technologies using singular value decomposition(SVD). Designed a multimodal model using layer-regularized dense neural network and multi-model embedding methods. Predicted how DNA, RNA, and protein measurements co-vary with development in single cells and derived a correlation score of 0.809 on test dataset.
+<!--- # 🎨 Projects
 - *2022.04*, Developed an automated method to map clinical concepts in exam rubric to various ways in which these concepts are expressed in clinical patient notes written by medical students, it is the final project of Machine learning for medical applications. Pre-trained deep learning models such as Bert, RoBERTa and  DeBERTa are used to perform token classification task. This model can identify identify specific clinical concepts in patient notes from medical licensing exams with an F-score of 83%.
 - *2022.04*, Analysis of gene expression levels of tumor and normal colon tissues, it is the final project of Computational Molecular Medicine. Identified differentially expressed genes and visualized it using fold change, t-test based on R packages. Then used GO to perform gene set enrichment analysis. Used hypothesis test, dimensionality reduction and other methods to extract features. Used machine learning techniques, such as clustering, neural network, to conduct a model which classify the tissue type. Then evaluated the model effectiveness on test data. \| [\[report\]](https://drive.google.com/file/d/1M5aZ6fXUAvm5W5FLfTFenN7fFkigtxbx/view?usp=sharing)
 - *2019.10*, Created protein interaction time network based on E.coli, it is the final project of System Biology. Analyzed the topological properties and parameters of complex biological networks and topology of the E.coli-based protein interaction time network, such as time-based protein interaction network
-changes, visual comparison of time network, etc.
+changes, visual comparison of time network, etc. --->
 
  
 # 🏢 Internships
-- *2022.11 - 2023. 11*, Advanced Institute of Information Technology, Peking University. Assembled Illumina, TELL-Seq and Nanopore genomes of different subtypes of C. difficile, and compare the sequencing results using MUMmer. Developed workflow for downstream analysis of sequencing, including non-coding RNA prediction, gene annotation and circos plot, and deployed it through Docker. Aimed to use the TELL-Seq to construct a phylogeny tree of C. difficile based on whole genome information. 
+- *2022.11 - 2023. 11*, Advanced Institute of Information Technology, Peking University.
+   - Assembled Illumina, TELL-Seq and Nanopore assembly of different subtypes of C. difficile, and compare the results.
+   - Developed analysis workflow and deployed it through Docker.
+   - Construct a phylogeny tree of C. difficile based on whole genome information. 
 
 # 🏆 Honors and Awards
 - *2021.10* Zhejiang University Scholarship. 
