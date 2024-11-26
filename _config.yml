@@ -7,8 +7,8 @@
 
 # Site Settings
 title                    : "Lingzhu Shen"
-description              : "Graduate student in Biomedical Engineering"
-repository               : "zhuzhusleepearly/zhuzhusleepearly.github.io"
+description              : "PhD student in CWRU"
+repository               : "lingzhuu/lingzhuu.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Lingzhu Shen"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Case Western Reserve University"
+  bio              : 
   location         : "Cleveland, OH"
   employer         :
   pubmed           : 
