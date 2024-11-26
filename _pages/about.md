@@ -51,7 +51,7 @@ I am a current first-year Ph.D. student in Biomedical and Health Informatics at 
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
-Transposase Enzyme-Linked Long-reads Sequencing technology produces inexpensive near-complete genomes and provides higher-resolution epidemiological and phylogenetical insights in an extremely GC-biased bacterial pathogen  (In preparation)
+Transposase Enzyme-Linked Long-reads Sequencing technology produces inexpensive near-complete genomes and provides higher-resolution epidemiological and phylogenetical insights in an extremely GC-biased bacterial pathogen.  (In preparation)
  
 <!--- # 🎨 Projects
 - *2022.04*, Developed an automated method to map clinical concepts in exam rubric to various ways in which these concepts are expressed in clinical patient notes written by medical students, it is the final project of Machine learning for medical applications. Pre-trained deep learning models such as Bert, RoBERTa and  DeBERTa are used to perform token classification task. This model can identify identify specific clinical concepts in patient notes from medical licensing exams with an F-score of 83%.
