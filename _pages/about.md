@@ -17,7 +17,7 @@ redirect_from:
  -->
 <span class='anchor' id='about-me'></span>
 
-I am a current first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University, under the supervision of Dr. [Hao Feng]([https://person.zju.edu.cn/en/pandafengye](https://hfenglab.org)). My research interests focus on the development of multi-omics data analysis methods, and their practical applications in the real world. 
+I am a current first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University, in rotation with Dr. [Hao Feng]([https://person.zju.edu.cn/en/pandafengye](https://hfenglab.org)). My research interests focus on the development of multi-omics data analysis methods, and their practical applications in the real world. 
 <!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
 
 
