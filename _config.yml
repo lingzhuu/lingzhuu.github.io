@@ -23,19 +23,19 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Lingzhu Shen"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Johns Hopkins University"
-  location         : "Baltimore, MD"
+  bio              : "Case Western Reserve University"
+  location         : "Cleveland, OH"
   employer         :
   pubmed           : 
   googlescholar    : #"https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "lshen26@jhu.edu"
+  email            : "lxs888@case.edu"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   facebook         :
   foursquare       :
-  github           : "zhuzhusleepearly"
+  github           : "lingzhuu"
   google_plus      :
   instagram        :
-  linkedin         : # e.g., "linkedin username"
+  linkedin         : Lingzhu Shen
   
 
 # Reading Files
