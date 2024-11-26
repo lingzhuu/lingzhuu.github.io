@@ -31,7 +31,8 @@ I am a current first-year Ph.D. student in Biomedical and Health Informatics at 
 - *2017.09 - 2021.06*, B.S. in Biological Science, Zhejiang University.   
 
 # 🧬 Research
-- *2022.09 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
+<!-- - *2024.08 - now*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).  -->
+- *2022.09 - 2023.06*,  Toward precision rehabilitation after stroke: prediction of mobility recovery using big data and functional status, superviced by Prof. [Ryan Roemmich](https://www.hopkinsmedicine.org/profiles/details/ryan-roemmich).
 - *2020.11 - 2021.06*,  Research intern at Institute of Translational Medicine, Zhejiang University, superviced by Prof. [Ye Feng](https://person.zju.edu.cn/en/pandafengye).
 - *2018.10 - 2020.10*,  Research intern at [The Sperm Laboratory at Zhejiang University](http://www.spermlab.org/), superviced by Prof. [Wan-Xi Yang](https://mypage.zju.edu.cn/spermlab)
 
