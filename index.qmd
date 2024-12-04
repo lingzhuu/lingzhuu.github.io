@@ -60,8 +60,8 @@ about:
 
 :::{#hero-heading}
 
-I'm a first-year PhD student in Biomedical and Health Informatics at Case Western Reserve University, Department of Population and Quantitative Health Sciences. Before that, I did my Master's degree in Biomedical Engineering at Johns Hopkins University and my Bachelor's degree in Biological Science at Zhejiang University.
+I'm a first-year PhD student in [Biomedical and Health Informatics](https://case.edu/medicine/pqhs/education/biomedical-health-informatics/phd-biomedical-health-informatics) at Case Western Reserve University, Department of Population and Quantitative Health Sciences. Before that, I did my Master's degree in Biomedical Engineering at Johns Hopkins University and my Bachelor's degree in Biological Science at Zhejiang University.
 
-My research interests focus on the development of epigenomics-centered multi-omics analysis methods, and their applications in the real world. This includes developing user-friendly tools to simplify bioinformatics analysis, utilizing statistical methods to model high-throughput omics data, and identifing differential epigenetics biomarkers. My primary approaches involve software development, bioinformatics analysis, and machine learning.
+My research interests focus on the development of epigenomics-centered multi-omics analysis methods, and their applications in the real world. This includes developing user-friendly tools to simplify bioinformatics analysis, utilizing statistical methods to model high-throughput omics data, and identifing differential epigenetics biomarkers. My primary approaches involve software development, bioinformatics analysis, and machine learning. Currently, I am working with [Dr. Hao Feng](https://hfenglab.org/) in my first rotation, focusing on statistical modeling of multi-omics data and the development of bioinformatics tools.
 
 If you're interested in my research or potential collaborations, feel free to drop me an e-mail!
