@@ -13,7 +13,7 @@ The website is hosted at: [lingzhuu.github.io](https://lingzhuu.github.io/)
 ## Project Structure
 
 - **`main`**: Contains the current live version of the website.
-- **`develop`**: Usedupdating the website in the future.
+- **`develop`**: Used for updating the website in the future.
 
 Key files and directories:
 - `_quarto.yml`: Global configurations for the website.
