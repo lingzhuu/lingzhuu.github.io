@@ -1,0 +1,134 @@
+project:
+  type: website
+  output-dir: docs
+
+# Meta
+description-meta: "I am a first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University."
+author-meta: "Lingzhu Shen"
+
+website:
+  title: "Lingzhu Shen"
+  image: "/files/gang-he-profile.jpeg"
+  description: "I am a first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University."
+ 
+  navbar:
+    background: light
+
+    left:
+#      - text: Home
+#        href: index.qmd
+      # - text: News&Events
+      #   menu:
+      #     - text: News
+      #       href: posts.qmd#category=news
+      #     - text: Events
+      #       href: posts.qmd#category=event
+      # - text: Research
+      #   menu:
+      #     - text: List of Publication
+      #       href: publications.qmd
+      #     - text: Selected Papers
+      #       href: posts.qmd#category=paper
+      #     - text: Commentary
+      #       href: posts.qmd#category=commentary
+      #     - text: Testimony
+      #       href: posts.qmd#category=testimony
+      #     - text: Awards
+      #       href: posts.qmd#category=award  
+      #     - text: Grants
+      #       href: https://deeppolicylab.github.io/projects.html
+      #       target: _blank                                  
+      # - text: Teaching
+      #   href: teaching.qmd
+      - text: Contact
+        href: contact.qmd
+      # - text: More
+      #   menu:        
+      #   - text: Media
+      #     href: media.qmd        
+      #   - text: Posts
+      #     href: posts.qmd
+      #   - text: Notes
+      #     href: notes.qmd        
+      #   - text: Now
+      #     href: now.qmd       
+      #   - text: Contact
+      #     href: contact.qmd   
+      # - text: Deep Policy Lab
+      #   href: https://deeppolicylab.github.io/
+      #   target: _blank
+      # - text: 中文
+      #   href: cn.qmd
+
+    right: 
+      - text: CV
+        href: files/CV_Shen.pdf
+        target: _blank 
+      - icon: github
+        href: https://github.com/lingzhuu
+        target: _blank
+      # - text: "{{< fa brands bluesky >}}"
+      #   href: https://bsky.app/profile/hegang.bsky.social
+      #   target: _blank
+      # - icon: twitter-x 
+      #   href: https://twitter.com/DrGangHe
+      #   target: _blank        
+      # - icon: rss
+      #   href: posts.xml
+      #   target: _blank
+  
+  page-navigation: true
+  
+  page-footer: 
+    left: "Lingzhu Shen &copy; <script>document.write(new Date().getFullYear())</script>" 
+    # right:  
+    #   - icon: github
+    #     href: https://github.com/drganghe/drganghe.github.io
+    #     target: _blank
+    #   - text: "{{< fa brands bluesky >}}" 
+    #     href: https://bsky.app/profile/hegang.bsky.social
+    #     target: _blank
+    #   - icon: rss
+    #     href: posts.xml
+    #     target: _blank  
+  
+  # search:
+  #   location: navbar
+  #   type: textbox
+  
+  reader-mode: true
+
+  draft-mode: unlinked
+  
+  repo-url: https://github.com/lingzhuu/lingzhuu.github.io
+#  repo-actions: [edit, issue, source]
+  
+  open-graph: true
+  
+  twitter-card: true 
+#  card-style: summary      
+  
+  site-url: "https://lingzhuu.github.io/"
+  
+#   google-analytics:
+#     tracking-id: "G-G4DYZHP5J7"
+#     anonymize-ip: true 
+
+# bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    footnotes-hover: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    fig-align: center
+    link-external-icon: false
+    link-external-newwindow: true
+    email-obfuscation: javascript
+    link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
+    include-in-header: "files/includes/_academic.qmd"
+

@@ -1,0 +1,28 @@
+---
+title: "Contact"
+description-meta: "Reach out to me with questions and comments"
+title-block-banner: false
+comments:
+ giscus: 
+   repo: lingzhuu/lingzhuu.github.io
+---
+
+<center>
+
+**Lingzhu Shen**
+
+Department of Population and Quantitative Health Sciences,
+
+School of Medicine,
+
+Case Western Reserve University, 
+
+10900 Euclid Ave., WG - 82W,
+
+Cleveland, OH 44106
+
+Phone: +1 (216) 926-0798
+
+E-mail: lxs888[AT]case[dot]edu
+
+</center>

@@ -1,0 +1,67 @@
+---
+title: "Lingzhu Shen, MSE"
+description-meta: "I am a first-year Ph.D. student in Biomedical and Health Informatics at Case Western Reserve University."
+image: files/profile/profile1.jpg
+page-navigation: false
+toc: false
+#sidebar: false
+page-layout: full
+
+about:
+  id: hero-heading
+  template: trestles
+  image-width: 70%
+  links:
+    # - icon: sun
+    #   text: DeepPolicyLab
+    #   href: https://deeppolicylab.github.io
+    #   target: _blank
+    # - icon: globe
+    #   text: CUNYprofile
+    #   href: https://www.baruch.cuny.edu/profiles/faculty/Gang-He
+    #   target: _blank
+    - icon: envelope
+      text: E-mail
+      href: mailto:lxs888@case.edu
+#    - icon: github
+#      text: Github
+#      href: https://github.com/drganghe
+#    - icon: twitter
+#      text: Twitter
+#      href: https://twitter.com/DrGangHe
+#    - icon: mastodon
+#      text: Mastodon
+#      href: https://mastodon.social/@hegang      
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/lingzhushen/
+      target: _blank
+    # - icon: youtube
+    #   text: YouTube
+    #   href: https://www.youtube.com/@DrGangHe     
+    #   target: _blank 
+    # - text: "{{< ai orcid >}} ORCID"   # use academic icons, "" are needed
+    #   href: https://orcid.org/0000-0002-8416-1965
+    #   target: _blank
+    # - text: "{{< ai clarivate >}} Web of Science"
+    #   href: https://www.webofscience.com/wos/author/record/N-4549-2013  
+    #   target: _blank
+    # - text: "{{< ai scopus >}} Scopus"
+    #   href: https://www.scopus.com/authid/detail.uri?authorId=55607981900
+    #   target: _blank
+    # - text: "{{< ai google-scholar >}} Google Scholar"
+    #   href: https://scholar.google.com/citations?user=vf90AuEAAAAJ
+    #   target: _blank
+    # - text: "{{< ai researchgate >}} Research Gate"
+    #   href: https://www.researchgate.net/profile/Gang-He-19
+    #   target: _blank
+---
+
+
+:::{#hero-heading}
+
+I'm a first-year PhD student in Biomedical and Health Informatics at Case Western Reserve University, Department of Population and Quantitative Health Sciences. Before that, I did my Master's degree in Biomedical Engineering at Johns Hopkins University and my Bachelor's degree in Biological Science at Zhejiang University.
+
+My research interests focus on the development of epigenomics-centered multi-omics analysis methods, and their applications in the real world. This includes developing user-friendly tools to simplify bioinformatics analysis, utilizing statistical methods to model high-throughput omics data, and identifing differential epigenetics biomarkers. My primary approaches involve software development, bioinformatics analysis, and machine learning.
+
+If you're interested in my research or potential collaborations, feel free to drop me an e-mail!
