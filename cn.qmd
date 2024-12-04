@@ -1,0 +1,69 @@
+---
+title: "沈凌竹"
+description-meta: "凯斯西储大学博士研究生"
+image: files/profile/profile1.jpg
+page-navigation: false
+toc: false
+#sidebar: false
+page-layout: full
+
+about:
+  id: hero-heading
+  template: trestles
+  image-width: 70%
+  links:
+    # - icon: sun
+    #   text: 深度能源与气候政策实验室
+    #   href: https://deeppolicylab.github.io/cn.html
+    #   target: _blank
+    # - icon: globe
+    #   text: CUNY主页
+    #   href: https://www.baruch.cuny.edu/profiles/faculty/Gang-He
+    #   target: _blank
+    - icon: envelope
+      text: E-mail
+      href: mailto:lxs888@case.edu
+#    - icon: github
+#      text: Github
+#      href: https://github.com/drganghe
+#    - icon: twitter
+#      text: Twitter
+#      href: https://twitter.com/DrGangHe
+#    - icon: mastodon
+#      text: Mastodon
+#      href: https://mastodon.social/@hegang      
+    - icon: linkedin
+      text: 领英
+      href: https://www.linkedin.com/in/lingzhushen/
+      target: _blank
+    # - icon: youtube
+    #   text: 优兔
+    #   href: https://www.youtube.com/@DrGangHe     
+    #   target: _blank 
+    # - text: "{{< ai orcid >}} ORCID"   # use academic icons, "" are needed
+    #   href: https://orcid.org/0000-0002-8416-1965
+    #   target: _blank
+    # - text: "{{< ai clarivate >}} Web of Science"
+    #   href: https://www.webofscience.com/wos/author/record/N-4549-2013  
+    #   target: _blank
+    # - text: "{{< ai scopus >}} Scopus"
+    #   href: https://www.scopus.com/authid/detail.uri?authorId=55607981900
+    #   target: _blank
+    # - text: 谷歌学术
+    #   href: https://scholar.google.com/citations?user=vf90AuEAAAAJ
+    #   target: _blank
+    # - text: 研究之门
+    #   href: https://www.researchgate.net/profile/Gang-He-19
+    #   target: _blank
+---
+
+:::{#hero-heading}
+
+我是凯斯西储大学（Case Western Reserve University）人口与定量健康科学系的一年级博士生。在此之前，我在约翰霍普金斯大学完成了生物医学工程硕士学位，并在浙江大学获得了生物科学学士学位。
+
+我的研究兴趣集中于以表观基因组学为核心的多组学分析方法的开发及其实际应用。这包括开发用户友好的工具以简化生物信息学分析，利用统计方法对高通量组学数据进行建模，以及鉴定差异性表观遗传标志物。我的主要研究方法涵盖软件开发、生物信息学分析和机器学习。
+
+如果您对我的研究或潜在合作感兴趣，欢迎通过电子邮件与我联系！
+
+:::
+
