@@ -1,4 +1,4 @@
-# My Personal Website
+# Lingzhu's Personal Website
 
 This is my personal website built with [Quarto](https://quarto.org/) and hosted on [GitHub Pages](https://pages.github.com/).
 
