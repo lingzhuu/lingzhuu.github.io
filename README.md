@@ -19,7 +19,6 @@ Key files and directories:
 - `_quarto.yml`: Global configurations for the website.
 - `index.qmd`: The main homepage of the website.
 - `publications.qmd`: List of publications (to be updated).
-- `styles/`: Custom CSS for styling the website.
-- `Files/`: Directory for storing images and other files used in the website.
+- `files/`: Directory for storing images and other files used in the website.
 
 ---
