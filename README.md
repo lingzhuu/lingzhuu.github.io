@@ -6,6 +6,3 @@ This is my personal website built with [Quarto](https://quarto.org/) and hosted 
 
 The website is hosted at: [lingzhuu.github.io](https://lingzhuu.github.io/)
 
-> **Note**: The `develop` branch contains updates under development, including publications and other sections that are not yet live on the main website.
-
----
