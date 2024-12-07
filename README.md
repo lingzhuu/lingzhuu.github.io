@@ -1,6 +1,6 @@
 # Lingzhu's Personal Website
 
-This is my personal website built with [Quarto](https://quarto.org/) and hosted on [GitHub Pages](https://pages.github.com/). This is the project for CWRU PQHS 431.
+This is my personal website built with [Quarto](https://quarto.org/) and hosted on [GitHub Pages](https://pages.github.com/). This is the course project for CWRU PQHS 431.
 
 ## Live Website
 
