@@ -1,0 +1,305 @@
+---
+title: "A Comparative Analysis: Assessing the Impact of Gender, Weight and Education on High Cholesterol Status"
+author: "Lingzhu Shen"
+date: last-modified
+format:
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+    date-format: iso
+    theme: paper
+    highlight: textmate
+---
+
+# Setup and Data Ingest
+
+```{r, message = FALSE, warning = FALSE}
+library(nhanesA)
+library(broom)
+library(patchwork)
+library(janitor)
+library(tidyverse)
+
+source("Zhang431.R")
+
+theme_set(theme_light())  # or use theme_set(theme_bw())
+knitr::opts_chunk$set(
+  comment = NA,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+```{r}
+# demo_raw <- read_xpt("P_DEMO.xpt")
+# saveRDS(demo_raw, "data/P_DEMO.Rds")
+# 
+# wh_raw <- read_xpt("P_WHQ.xpt")
+# saveRDS(wh_raw, "data/P_WHQ.Rds")
+# 
+# bp_raw <- read_xpt("P_BPQ.xpt")
+# saveRDS(bp_raw, "data/P_BPQ.Rds")
+```
+
+```{r}
+# demo_raw <- readRDS("data/P_DEMO.Rds")
+# wh_raw <- readRDS("data/P_WHQ.Rds")
+# bp_raw <- readRDS("data/P_BPQ.Rds")
+# data_raw <- demo_raw %>%
+#   left_join(wh_raw, by = "SEQN") %>%
+#   left_join(bp_raw, by = "SEQN")
+# 
+# saveRDS(data_raw, "data/merged.Rds")
+```
+
+
+# Cleaning the Data 
+
+```{r}
+data_raw <- readRDS("data/merged.Rds")
+data_clean <- data_raw %>%
+  filter(RIDSTATR == 2) %>%
+  filter(RIDAGEYR >= 21 & RIDAGEYR <= 79)
+
+nrow(data_clean)
+```
+```{r}
+data_clean <- data_clean %>%
+  select(SEQN, RIAGENDR, DMDEDUC2, WHD020, BPQ080) %>%
+  mutate(
+    # Recode DMDEDUC2 into four categories
+    DMDEDUC2 = case_when(
+      DMDEDUC2 %in% c(1, 2) ~ "Less than HS",
+      DMDEDUC2 == 3 ~ "HS Grad",
+      DMDEDUC2 == 4 ~ "Some College",
+      DMDEDUC2 == 5 ~ "College Grad",
+      TRUE ~ NA_character_
+    ),
+    # Handle missing values
+    BPQ080 = ifelse(BPQ080 %in% c(7, 9), NA, BPQ080),
+    WHD020 = ifelse(WHD020 %in% c(7777, 9999), NA, WHD020),
+    # Convert to factor
+    RIAGENDR = factor(RIAGENDR, levels = c(1, 2), labels = c("M", "F")),
+    DMDEDUC2 = factor(DMDEDUC2, levels = c("Less than HS", "HS Grad", "Some College", "College Grad")),
+    BPQ080 = factor(BPQ080, levels = c(1, 2), labels = c("Yes", "No"))
+  )
+```
+
+```{r}
+data_clean <- data_clean[complete.cases(data_clean), ]
+```
+
+
+# Codebook and Data Description
+
+`r nrow(data_clean)` adults ages 21-79 participating in NHANES 2017-2020 with complete data on the variables listed in the table below.
+
+## Codebook 
+
+| Variable   | Role    | Description                                   |
+|:----------:|:-------:|:--------------------------------------------:|
+| **SEQN**   | ID      | --                   |
+| **DMDEDUC2** | 4-cat  | Education level - Adults 20+                |
+| **WHD020** | Quant   | Current self-reported weight (pounds)        |
+| **RIAGENDR** | Binary  | Gender                    |
+| **BPQ080** | Binary  | Doctor told you - high cholesterol level     |
+
+
+
+## Analytic Tibble
+
+```{r}
+tibble(data_clean)
+```
+
+## Data Summary
+
+```{r}
+Hmisc::describe(data_clean %>% select(-SEQN))
+```
+
+
+# The impact of self-reported weight (in pounds) on high cholesterol
+
+## The Question
+
+**Question: **Does the self-reported weight (in pounds) differ between individuals who have been told by a doctor that they have high cholesterol compared to those who have not?
+
+**Hypothesis: **Individuals diagnosed with high cholesterol will have higher average body weight compared to those without such a diagnosis. Elevated body weight, particularly obesity, is associated with a higher likelihood of variousadverse health conditions.
+
+## Describing The Data
+
+The outcome variable for this analysis is `WHD020`, which represents the self-reported weight of individuals in pounds. This variable is quantitative.
+
+The grouping variable for this analysis is `BPQ080`, which indicates whether an individual has ever been told by a doctor or other health professional that they have high cholesterol. It is a binary categorical variable with two levels: `Yes` and `No`. This variable is used to divide the weight data into two groups for comparison.
+
+
+## Main Analysis
+
+The bootstrap method was chosen because it's more robust to handle potential violations of parametric assumptions, such as normality and equal variance, which might not hold in the original data.
+
+```{r}
+bootdif <-
+  function(y, g, conf.level=0.90, B.reps = 2000) {
+    lowq = (1 - conf.level)/2
+    g <- as.factor(g)
+    a <- attr(Hmisc::smean.cl.boot(y[g==levels(g)[1]], B=B.reps, reps=TRUE),'reps')
+    b <- attr(Hmisc::smean.cl.boot(y[g==levels(g)[2]], B=B.reps, reps=TRUE),'reps')
+    meandif <- diff(tapply(y, g, mean, na.rm=TRUE))
+    a.b <- quantile(b-a, c(lowq,1-lowq))
+    res <- c(meandif, a.b)
+    names(res) <- c('Mean Difference',lowq, 1-lowq)
+    res
+  }
+```
+
+```{r}
+set.seed(431)
+bootdif(y = data_clean$WHD020, 
+        g = data_clean$BPQ080, 
+        conf.level = 0.90, B.reps = 2000)
+```
+
+
+## Conclusions
+
+The result shows a mean difference of -2.26 pounds, with a 90% confidence interval ranging from -6.26 to 1.76 pounds. This result indicates that the group who reported having high cholesterol had a slightly lower mean weight than the group without high cholesterol. However, the confidence interval includes zero, suggesting that the observed difference is not statistically significant at the 90% confidence level. This implies that there is insufficient evidence to conclude that the mean weight differs between the two groups based on this analysis.
+
+# The impact of gender on high cholesterol
+
+## The Question
+
+**Question: **Is there a difference in the prevalence of high cholesterol between males and females?
+
+**Hypothesis: **According to previous research, men are more likely to have been diagnosed with high cholesterol compared to women. Research indicates that men tend to have higher levels of low-density lipoprotein (LDL) cholesterol and lower levels of high-density lipoprotein (HDL) cholesterol than women, contributing to a higher prevalence of hypercholesterolemia among men.
+
+
+## Describing The Data
+
+The first variable for this analysis is `BPQ080`, which indicates whether an individual has ever been told by a doctor or other health professional that they have high cholesterol. It is a binary categorical variable with two levels: `Yes` and `No`.  
+
+The second variable for this analysis is `RIAGENDR`, which represents the gender of the individuals. It is a binary categorical variable with two levels: `Male` and `Female`. Together, these variables are used to create a 2x2 table to analyze their relationship.
+
+
+```{r}
+table_2x2 <- table(data_clean$RIAGENDR, 
+                   data_clean$BPQ080, 
+                   dnn = c("Gender", "High Cholesterol"))
+table_2x2_df <- as.data.frame.matrix(table_2x2) %>%
+  rownames_to_column(var = "Gender") %>%          
+  adorn_totals(where = "both") %>%            
+  adorn_percentages(denominator = "row") %>%  
+  adorn_pct_formatting(digits = 1) %>%
+  adorn_ns() 
+table_2x2_df
+```
+```{r}
+table_count <- as.data.frame(table_2x2)
+colnames(table_count) <- c("Gender", "High_Cholesterol", "Count")
+
+ggplot(table_count, aes(x = Gender, y = Count, fill = High_Cholesterol)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_fill_brewer(palette = "Spectral", direction = -1) +
+  labs(
+    title = "Proportion of High Cholesterol by Gender",
+    x = "Gender",
+    y = "Proportion",
+    fill = "High Cholesterol"
+  ) +
+  theme_minimal()
+```
+
+From the the numerical summary and stacked bar plot, we can see males have a slightly higher proportion of high cholesterol cases compared to females, as indicated by the height of the yellow section in each bar. However, this minor disparity requires further analysis to determine its statistical significance.
+
+## Main Analysis
+
+```{r}
+result <- twobytwo(
+  a = 1370, b = 2344, c = 1326, d = 2623,
+  namer1 = "Male", namer2 = "Female",
+  namec1 = "High Cholesterol", namec2 = "Not High Cholesterol",
+  conf.level = 0.95
+)
+```
+
+The analysis compares the prevalence of high cholesterol between males and females using relative risk, odds ratio, and probability difference metrics. Males exhibit a slightly higher proportion of high cholesterol cases (36.89%) compared to females (33.58%). The relative risk is 1.10 (95% CI: 1.03 - 1.17), indicating that males are 10% more likely to have high cholesterol than females. Similarly, the sample odds ratio is 1.16 (95% CI: 1.05 - 1.27), suggesting that the odds of high cholesterol are significantly higher in males. The exact p-value (0.0026) and asymptotic p-value (0.0024) confirm that these differences are statistically significant.
+
+The assumptions underlying this analysis include independent observations within each group, and sufficient sample size to provide reliable estimates for the confidence intervals. These assumptions are justified as the dataset contains large samples of males and females.
+
+## Conclusions
+
+The analysis shows that males have a slightly higher likelihood of having high cholesterol compared to females, with a relative risk &gt; 1 and a significant probability difference of 3.31% (p &lt; 0.05). These findings align with the existing belief that biological or lifestyle factors might contribute to a higher prevalence of high cholesterol in males. 
+
+# The impact of education level on high cholesterol
+
+## The Question
+
+**Question: **Is there an association between the prevalence of high cholesterol and education level?
+
+**Hypothesis: **Individuals with lower education levels are more likely to have been diagnosed with high cholesterol compared to those with higher education levels. Lower education level is usually linked to poorer health outcomes,  potentially due to limited access to health information and resources.
+
+
+## Describing The Data
+
+The first variable for this analysis is `BPQ080`, which indicates whether an individual has ever been told by a doctor or other health professional that they have high cholesterol. It is a binary categorical variable with two levels: `Yes` and `No`.  
+
+The second variable for this analysis is `DMDEDUC2`, which indicates the education level of individuals. It is a categorical variable with four levels: `Less than HS`, `HS Grad`, `Some College`, and `College Grad`. Together, these variables are used to create a 2x4 table to analyze their relationship.
+
+
+```{r}
+table_2x4 <- table(data_clean$BPQ080, 
+                   data_clean$DMDEDUC2, 
+                   dnn = c("High Cholesterol", "Education Level"))
+
+table_2x4_df <- as.data.frame.matrix(table_2x4) %>%
+  rownames_to_column(var = "High Cholesterol") %>%
+  adorn_totals(where = "both") %>%
+  adorn_percentages(denominator = "row") %>%
+  adorn_pct_formatting(digits = 1) %>%
+  adorn_ns()
+
+table_2x4_df
+```
+
+```{r}
+table_count <- as.data.frame(table_2x4)
+colnames(table_count) <- c("High_Cholesterol", "Education_Level", "Count")
+
+ggplot(table_count, aes(x = Education_Level, y = Count, fill = High_Cholesterol)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_fill_brewer(palette = "Spectral", direction = -1) +
+  labs(
+    title = "Proportion of High Cholesterol by Education Level",
+    x = "Education Level",
+    y = "Proportion",
+    fill = "High Cholesterol"
+  ) +
+  theme_minimal()
+```
+
+
+The stacked bar plot illustrates the proportions of individuals with and without high cholesterol across four education levels: `Less than HS`, `HS Grad`, `Some College`, and `College Grad`. The `Less than HS` group shows a higher proportion of individuals with high cholesterol, as indicated by the larger yellow section relative to the other groups.
+
+## Main Analysis
+
+```{r}
+chi_test <- chisq.test(table_2x4)
+chi_test
+```
+
+The Chi-squared test yielded a chi-squared statistic of 5.2417 with 3 degrees of freedom and a p-value of 0.1549. Since the p-value exceeds the common significance threshold of 0.05, we fail to reject the null hypothesis and conclude that there is no statistically significant association between education level and high cholesterol status.
+
+Given the dataset's large sample size and the independent classification of individuals into education and cholesterol status categories, we conclude that these assumptions are reasonable and justified.
+
+## Conclusions
+
+The chi-square test results indicate that there is no statistically significant association between education level and high cholesterol status. While this finding contrasts with the expectation that education might influence health conditions, other factors such as genetic predisposition may play a larger role. Further analyses incorporating these variables could provide deeper insights.
+
+# Session Information
+
+```{r}
+sessioninfo::session_info()
+```
+
+

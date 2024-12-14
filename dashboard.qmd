@@ -1,0 +1,538 @@
+---
+title: "High Cholesterol Risk Factors"
+format: 
+  dashboard:
+    sidebar:
+      width: 200px
+    navbar:
+      right:
+        -text: "Blog"
+        href: "blog/report1.html"
+        # -text: "Home"
+        # href: 
+logo: images/logo.jpg
+theme: [sandstone, theme/custom.scss]
+fig-width: 10
+fig-asp: 0.3
+params:
+  month: "March"
+  year: "2020"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(scales)
+library(DT)
+library(gt)
+theme_set(theme_minimal(base_size = 24, base_family = "Atkinson Hyperlegible"))
+
+source("Zhang431.R")
+```
+
+```{r}
+#| label: load-data
+#| message: false
+# demo_raw <- read_xpt("P_DEMO.xpt")
+# saveRDS(demo_raw, "data/P_DEMO.Rds")
+# 
+# wh_raw <- read_xpt("P_WHQ.xpt")
+# saveRDS(wh_raw, "data/P_WHQ.Rds")
+# 
+# bp_raw <- read_xpt("P_BPQ.xpt")
+# saveRDS(bp_raw, "data/P_BPQ.Rds")
+#
+# demo_raw <- readRDS("data/P_DEMO.Rds")
+# wh_raw <- readRDS("data/P_WHQ.Rds")
+# bp_raw <- readRDS("data/P_BPQ.Rds")
+# 
+# data_raw <- demo_raw %>%
+#   left_join(wh_raw, by = "SEQN") %>%
+#   left_join(bp_raw, by = "SEQN")
+# 
+# saveRDS(data_raw, "data/merged.Rds")
+#
+data_raw <- readRDS("data/merged.Rds")
+```
+
+```{r}
+#| label: set-inputs
+
+time_period <- paste(params$month, params$year)
+```
+
+```{r}
+#| label: prep-data
+
+data_clean <- data_raw %>%
+  filter(RIDSTATR == 2) %>%
+  filter(RIDAGEYR >= 21 & RIDAGEYR <= 79)
+
+data_clean <- data_clean %>%
+  select(SEQN, RIAGENDR, DMDEDUC2, WHD020, BPQ080) %>%
+  mutate(
+    # Recode DMDEDUC2 into four categories
+    DMDEDUC2 = case_when(
+      DMDEDUC2 %in% c(1, 2) ~ "Less than HS",
+      DMDEDUC2 == 3 ~ "HS Grad",
+      DMDEDUC2 == 4 ~ "Some College",
+      DMDEDUC2 == 5 ~ "College Grad",
+      TRUE ~ NA_character_
+    ),
+    # Handle missing values
+    BPQ080 = ifelse(BPQ080 %in% c(7, 9), NA, BPQ080),
+    WHD020 = ifelse(WHD020 %in% c(7777, 9999), NA, WHD020),
+    # Convert to factor
+    RIAGENDR = factor(RIAGENDR, levels = c(1, 2), labels = c("Male", "Female")),
+    DMDEDUC2 = factor(DMDEDUC2, levels = c("Less than HS", "HS Grad", "Some College", "College Grad")),
+    BPQ080 = factor(BPQ080, levels = c(1, 2), labels = c("Yes", "No"))
+  )
+
+data_clean <- data_clean[complete.cases(data_clean), ]
+```
+
+#  {.sidebar}
+
+
+The data is obtained on `{r} time_period`.
+
+
+::: {.callout-note collapse="true"}
+## Data source
+
+The data for this anlysis is sourced from  [The National Health and Nutrition Examination Survey (NHANES)](https://www.cdc.gov/nchs/nhanes/about_nhanes.htm).
+
+NHANES is a program of studies designed to assess the health and nutritional status of adults and children in the United States. The survey is unique in that it combines interviews and physical examinations. NHANES is a major program of the National Center for Health Statistics (NCHS). NCHS is part of the Centers for Disease Control and Prevention (CDC) and has the responsibility for producing vital and health statistics for the Nation.
+
+The NHANES interview includes demographic, socioeconomic, dietary, and health-related questions. The examination component consists of medical, dental, and physiological measurements, as well as laboratory tests administered by highly trained medical personnel.
+
+For this study, several variables have been selected to explore potential risk factors associated with high cholesterol(listed below).
+:::
+
+
+| Variable   | Type    | 
+|:----------:|:-------:|
+| **ID**   | --      |
+| **Gender**| Binary | 
+| **Education level**| 4-cat  | 
+| **Weight** | Quant   |
+| **High cholesterol** | Binary  |
+
+# Overview
+
+
+```{r}
+#| label: all-values
+#| results: hide
+
+n_total <- nrow(data_clean)
+
+p_high <- data_clean |>
+  count(BPQ080) |>
+  mutate(p = n / sum(n)) |>
+  filter(BPQ080 == "Yes") |>
+  pull(p)
+
+p_low <- data_clean |>
+  count(BPQ080) |>
+  mutate(p = n / sum(n)) |>
+  filter(BPQ080 == "No") |>
+  pull(p)
+```
+
+
+In this study, we aimed to explore the influencing factors of **High Cholesterol**. The candidate variables included:
+
+- **Gender**: Male, Female.
+
+- **Education Level**: Less than HS, HS Grad, Some College, College Grad.
+
+- **Weight**: Quantitative measure in pounds.
+
+## Row {height="40%"}
+
+### Column {width="40%"}
+
+```{r}
+#| title: Numerical summary
+
+data_clean |>
+  count(BPQ080) |>
+  mutate(p = n / sum(n)) |>
+  gt() |>
+  fmt_percent(
+    columns = p,
+    decimals = 1
+  ) |>
+  tab_style(
+    style = cell_text(color = "#ae8b2d", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = BPQ080 == "Yes"
+    )
+  ) |>
+  tab_style(
+    style = cell_text(color = "#0e2635", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = BPQ080 == "No"
+    )
+  ) |>
+  cols_label(
+    BPQ080 = "",
+    n = "Number of participants",
+    p = "Proportion of high cholesterol",
+    .fn = md
+  )
+```
+
+### Column {width="60%"}
+
+```{r}
+#| title: Weight and high cholesterol
+
+ggplot(data_clean, aes(x = BPQ080, y = WHD020, fill = BPQ080)) +
+  geom_violin(alpha = 0.25) +
+  geom_boxplot() +
+  stat_summary(fun = "mean") +
+  scale_fill_manual(
+    values = c("#ae8b2d", "#0e2635"),
+    guide = guide_legend(reverse = TRUE)
+    ) +
+  labs(x = "Cholesterol Status",
+       y = "Weight (Pounds)",
+       fill = "High Cholesterol") +
+  theme_minimal()
+```
+
+## Row {height="35%"}
+
+```{r}
+#| title: Gender and high cholesterol
+
+table_2x2 <- table(data_clean$RIAGENDR, 
+                   data_clean$BPQ080, 
+                   dnn = c("Gender", "High Cholesterol"))
+
+table_count <- as.data.frame(table_2x2)
+colnames(table_count) <- c("Gender", "High_Cholesterol", "Count")
+
+ggplot(table_count, aes(x = Count, y = Gender, fill = High_Cholesterol)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_fill_manual(
+    values = c("#ae8b2d", "#0e2635"),
+    guide = guide_legend(reverse = TRUE)
+    ) +
+  scale_x_continuous(labels = label_percent()) +
+  labs(y = NULL, x = NULL, fill = "High Cholesterol") +
+  theme_minimal()
+```
+
+```{r}
+#| title: Education level and high cholesterol
+
+table_2x4 <- table(data_clean$BPQ080, 
+                   data_clean$DMDEDUC2, 
+                   dnn = c("High Cholesterol", "Education Level"))
+
+table_count <- as.data.frame(table_2x4)
+colnames(table_count) <- c("High_Cholesterol", "Education_Level", "Count")
+
+ggplot(table_count, aes(x = Count, y = Education_Level, fill = High_Cholesterol)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_fill_manual(
+    values = c("#ae8b2d", "#0e2635"),
+    guide = guide_legend(reverse = TRUE)
+    ) +
+  scale_x_continuous(labels = label_percent()) +
+  labs(y = NULL, x = NULL, fill = "High Cholesterol") +
+  theme_minimal()
+```
+
+# Data
+
+```{r}
+data_clean |>
+  arrange(SEQN) |>
+  datatable(
+    colnames = c("ID", "Gender", "Education level", "Weights (lb)", "High cholesterol"),
+    options = list(dom = 'ftp', paging = TRUE)
+    )
+```
+
+# Gender {orientation="columns"}
+
+## Column {width="60%"}
+
+### Row {height="35%"}
+
+```{r}
+#| title: Numerical summary
+
+table_2x2 <- table(data_clean$BPQ080, 
+                   data_clean$RIAGENDR, 
+                   dnn = c("High Cholesterol", "Gender"))
+
+formatted_table <- as.data.frame.matrix(table_2x2) %>%
+  rownames_to_column(var = "High Cholesterol")
+
+formatted_table %>%
+  gt() %>%
+  tab_spanner(
+    label = "Gender",
+    columns = c(Male, Female)
+  ) %>%
+  tab_style(
+    style = cell_text(color = "#ae8b2d", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = `High Cholesterol` == "Yes"
+    )
+  ) %>%
+  tab_style(
+    style = cell_text(color = "#0e2635", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = `High Cholesterol` == "No"
+    )
+  ) %>%
+  cols_label(
+    `High Cholesterol` = "High Cholesterol",
+    Male = "Male",
+    Female = "Female"
+  )
+
+```
+
+### Row {height="65%"}
+
+```{r}
+#| title: 2 by 2 table analysis
+
+result <- twobytwo(
+  a = 1370, b = 2344, c = 1326, d = 2623,
+  namer1 = "Male", namer2 = "Female",
+  namec1 = "High Cholesterol", namec2 = "Not High Cholesterol",
+  conf.level = 0.95
+)
+```
+
+```{r}
+#| title: Maternal age and term
+
+# ld_v |>
+#   count(maternal_age, term) |>
+#   ggplot(aes(x = n, y = fct_rev(maternal_age), fill = fct_rev(term))) +
+#   geom_col(position = "fill", color = "white") +
+#   scale_fill_brewer(
+#     palette = "Greens",
+#     guide = guide_legend(reverse = TRUE),
+#     direction = -1
+#   ) +
+#   scale_x_continuous(labels = label_percent()) +
+#   labs(y = NULL, x = NULL, fill = "Term")
+```
+
+## Column {width="40%"}
+
+```{r}
+#| title: Data
+
+data_clean |>
+  select(SEQN, RIAGENDR, BPQ080) |>
+  arrange(SEQN) |>
+  datatable(
+    colnames = c("ID", "Gender", "High cholesterol"),
+    options = list(
+      dom = "lrtip",
+      paging = TRUE,
+      lengthMenu = c(5, 10, 25),
+      pageLength = 10,
+      scrollY = TRUE
+    ),
+  )
+```
+
+# Education {orientation="columns"}
+
+## Column {width="60%"}
+
+```{r}
+#| label: cesarean-values
+#| results: hide
+
+# ld_c <- ld |>
+#   filter(delivery_method == "Cesarean")
+# 
+# n_births_c <- nrow(ld_c)
+# 
+# p_preterm_c <- ld_c |>
+#   count(term) |>
+#   mutate(p = n / sum(n)) |>
+#   filter(term == "Pre-term") |>
+#   pull(p)
+# 
+# p_preterm_color_c <- case_when(
+#   between(p_preterm_c, params$us_preterm_rate, params$us_preterm_rate + params$threshold_diff) ~ "warning",
+#   p_preterm_c > params$us_preterm_rate + params$threshold_diff ~ "danger",
+#   .default = "light"
+#   )
+```
+
+
+### Row {height="50%"}
+
+```{r}
+#| title: Numerical summary
+
+table_2x4 <- table(data_clean$BPQ080, 
+                   data_clean$DMDEDUC2, 
+                   dnn = c("High Cholesterol", "Education level"))
+
+formatted_table_2x4 <- as.data.frame.matrix(table_2x4) %>%
+  rownames_to_column(var = "High Cholesterol")
+
+formatted_table_2x4 %>%
+  gt(rowname_col = "High Cholesterol") %>%
+  tab_spanner(
+    label = "Education level",
+    columns = everything()
+  ) %>%
+  tab_style(
+    style = cell_text(color = "#ae8b2d", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = `High Cholesterol` == "Yes"
+    )
+  ) %>%
+  tab_style(
+    style = cell_text(color = "#0e2635", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = `High Cholesterol` == "No"
+    )
+  ) %>%
+  cols_label(
+    `High Cholesterol` = "High Cholesterol"
+  )
+
+```
+
+### Row {height="50%"}
+
+```{r}
+#| title: Pearson's Chi-squared test
+
+chi_test <- chisq.test(table_2x4)
+chi_test
+```
+
+
+
+## Column {width="60%"}
+
+```{r}
+#| title: Data
+
+data_clean |>
+  select(SEQN, DMDEDUC2, BPQ080) |>
+  arrange(SEQN) |>
+  datatable(
+    colnames = c("ID", "Education level", "High cholesterol"),
+    options = list(
+      dom = "lrtip",
+      paging = TRUE,
+      lengthMenu = c(5, 10, 25),
+      pageLength = 10,
+      scrollY = TRUE
+    ),
+  )
+```
+
+# Weight {orientation="columns"}
+
+## Column {width="60%"}
+
+
+```{r}
+#| title: Weight distribution
+
+ggplot(data_clean, aes(x = WHD020, fill = BPQ080)) +
+  geom_histogram(alpha = 0.6, position = "identity", bins = 20) +
+  theme_minimal() +
+  labs(x = "Weight (lb)") +
+  scale_fill_manual(
+    values = c("#ae8b2d", "#0e2635"),
+    guide = guide_legend(reverse = TRUE)
+    ) +
+  xlim(50, 500)
+```
+
+```{r}
+#| title: Numeric summary
+
+summary_data <- data_clean %>%
+  group_by(BPQ080) %>%
+  summarise(
+    mean = round(mean(WHD020),1),
+    sd = round(sd(WHD020),1),
+    median = median(WHD020),
+    min = min(WHD020),
+    q25 = round(quantile(WHD020, 0.25),1),
+    q75 = round(quantile(WHD020, 0.75),1),
+    max = max(WHD020)
+  ) %>%
+  rename(`High Cholesterol`= BPQ080)
+
+
+summary_data %>%
+  gt() %>%
+  tab_spanner(
+    label = "Weight Summary",
+    columns = c(mean, sd, median, min, q25, q75, max)
+  ) %>%
+  tab_style(
+    style = cell_text(color = "#ae8b2d", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = `High Cholesterol` == "Yes"
+    )
+  ) %>%
+  tab_style(
+    style = cell_text(color = "#0e2635", weight = "bold"),
+    locations = cells_body(
+      columns = everything(),
+      rows = `High Cholesterol` == "No"
+    )
+  )
+
+
+```
+
+## Column {width="40%"}
+
+```{r}
+#| title: Data
+
+data_clean |>
+  select(SEQN, WHD020, BPQ080) |>
+  arrange(SEQN) |>
+  datatable(
+    colnames = c("ID", "Weight", "High cholesterol"),
+    options = list(
+      dom = "lrtip",
+      paging = TRUE,
+      lengthMenu = c(5, 10, 25),
+      pageLength = 10,
+      scrollY = TRUE
+    ),
+  )
+```
+
+
+

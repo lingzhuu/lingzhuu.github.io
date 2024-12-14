@@ -40,6 +40,10 @@ website:
       #       target: _blank                                  
       - text: Contact
         href: contact.qmd
+      - text: Dashboard
+        href: dashboard.qmd
+      - text: Blog
+        href: report1.qmd      
       # - text: More
       #   menu:        
       #   - text: Media
@@ -116,7 +120,6 @@ website:
 
 format:
   html:
-    theme: cosmo
     css: styles.css
     toc: true
     footnotes-hover: true

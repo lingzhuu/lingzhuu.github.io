@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lingzhuu.github.io/index.html</loc>
-    <lastmod>2024-12-14T02:11:32.960Z</lastmod>
+    <lastmod>2024-12-14T02:39:01.297Z</lastmod>
   </url>
   <url>
     <loc>https://lingzhuu.github.io/contact.html</loc>
     <lastmod>2024-12-03T20:13:36.169Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lingzhuu.github.io/report1.html</loc>
+    <lastmod>2024-12-14T02:15:12.083Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lingzhuu.github.io/dashboard.html</loc>
+    <lastmod>2024-12-14T00:44:02.000Z</lastmod>
   </url>
 </urlset>
