@@ -40,8 +40,6 @@ website:
       #       target: _blank                                  
       - text: Blog
         href: ld-dashboard-main/report1.qmd
-      - text: Dashboard
-        href: ld-dashboard-main/dashboard.qmd
       - text: Contact
         href: contact.qmd
       # - text: More
