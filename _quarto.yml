@@ -38,8 +38,10 @@ website:
       #     - text: Grants
       #       href: https://deeppolicylab.github.io/projects.html
       #       target: _blank                                  
-      # - text: Teaching
-      #   href: teaching.qmd
+      - text: Blog
+        href: ld-dashboard-main/report1.qmd
+      - text: Dashboard
+        href: ld-dashboard-main/dashboard.qmd
       - text: Contact
         href: contact.qmd
       # - text: More
