@@ -15,8 +15,8 @@ website:
     background: light
 
     left:
-#      - text: Home
-#        href: index.qmd
+    #  - text: Home
+    #    href: index.qmd
       # - text: News&Events
       #   menu:
       #     - text: News
@@ -39,11 +39,7 @@ website:
       #       href: https://deeppolicylab.github.io/projects.html
       #       target: _blank                                  
       - text: Contact
-        href: contact.qmd
-      - text: Dashboard
-        href: dashboard.qmd
-      - text: Blog
-        href: report1.qmd      
+        href: contact.qmd     
       # - text: More
       #   menu:        
       #   - text: Media
