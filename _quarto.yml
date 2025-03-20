@@ -48,8 +48,8 @@ website:
       #     href: posts.qmd
       #   - text: Notes
       #     href: notes.qmd        
-      #   - text: Now
-      #     href: now.qmd       
+      - text: Blog
+        href: now.qmd       
       #   - text: Contact
       #     href: contact.qmd   
       # - text: Deep Policy Lab
