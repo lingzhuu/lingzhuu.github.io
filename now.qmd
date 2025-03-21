@@ -1,60 +1,14 @@
 ---
-title: "Now"
+title: "Blog"
 title-block-banner: false
 ---
 
-<!--This is my personal clarity, please delete or replace with your clarity-->
-{{< include /files/includes/_msclarity.qmd >}}
+Today I want to talk about an important article published in The American Statistician, titled “Moving to a World Beyond ‘p < 0.05’.” Co-authored by a group of leading statisticians, this piece presents argument: it is time to abandon the concept of “statistical significance” and rethink how we approach statistical inference.
 
-A few things keep me busy these days:
+For decades, researchers across disciplines have relied heavily on the p-value threshold of 0.05 to determine whether a result is “statistically significant.” While this practice was once useful as a simple rule of thumb, the article argues that the continued use of the “statistical significance” label now does more harm than good. The authors contend that dichotomizing results into “significant” and “non-significant” oversimplifies the complexity of data and promotes binary thinking. Rather than abandoning p-values altogether, they call for a shift in how we interpret them—moving beyond arbitrary thresholds and toward a deeper engagement with effect sizes, uncertainty, and context. This change would improve the quality of scientific discourse and encourage researchers to think more critically about their results. Embracing the uncertainty inherent in real data, rather than suppressing it, allows for a more nuanced and honest understanding of scientific evidence.
 
-## Kids
+As a young researcher, I find this call especially resonant. Our generation has been trained from the start to view p-values as a central element of statistical thinking. From homework assignments to academic research, we were taught to consider “p < 0.05” as a kind of success criterion. Once we enter academia, the peer review system further reinforces this habit. Reviewers often look for “significant” results and tend to undervalue findings that are not, regardless of their real-world implications. This deep-rooted dependence on statistical significance is structural—and changing it will not be easy.
 
-- Raising 2 young kids and spending 12 hours a day with them when their school is closed
-
-## Research 
-
-::: {.callout-tip}
-
-## Big picture question
-
-How can we achieve carbon neutrality by mid-century to address climate change?   
-How to make the clean energy transition more:
-
-- Sustainable (energy and environment)
-- Resilient (energy and climate) 
-- Equitable (energy and justice) 
-
-:::
-
-- I'm working with Baruch colleagues on the SSA project Exploring Energy Burden Among the Older Adults and People with Disabilities in New York City Public Housing Communities  
-- I'm working with EDF on the Multi-Country Electricity Transition Potential and Challenges Project   
-- I'm working on the climate, air pollution, and human health effect of imported solar PV supported by the ClimateWorks Foundation  
-- I'm collaborating with LBL on power system decarbonization: we are organizing an [Special Issue](/posts/2024-01-special-issue-china-power-system-carbon-neutrality/index.qmd) (*The Electricity Journal*) and a [Workshop](https://deeppolicylab.github.io/events/2024-07-19-workshop-on-open-modeling-carbon-neutrality-of-the-power-sector/index.html)  
+But change must begin somewhere. As early-career researchers, we are in a unique position to help lead this shift. Even though moving beyond “statistically significant” may cause discomfort and resistance—especially in systems so deeply built around p-values—it is a necessary step toward better science.
 
 
-### Welcome collaborations on
-
-- Clean energy global supply chain
-- Power system decarbonization modeling
-- Climate impact on energy systems
-- Just energy transition
-- Energy-water-carbon nexus  
-- Other interdisciplinary aspects of carbon neutrality 
-
-
-## Teaching
-
-
-Fall Semester: 
-
-- PAF 9199 [Energy and Climate Policy](https://drganghe.github.io/energy-climate-policy) 
-
-Spring Semester:
-
-- PAF 4199 [Energy, Climate, and Society](https://drganghe.github.io/energy-climate-society) 
-- PAF 9174 [Program Evaluation](https://drganghe.github.io/program-evaluation) 
-
-I’m seeking guest speakers who are passionate about sharing their experiences and inspiring next generation of climate leaders:
-
-- [Climate Guest Speakers](https://drganghe.github.io/climate-guest-speakers/about.html)
