@@ -17,7 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I’m a first-year PhD student in Biomedical and Health Informatics at [Case Western Reserve University, Department of Population and Quantitative Health Sciences](https://case.edu/medicine/pqhs/education/biomedical-health-informatics/phd-biomedical-health-informatics). Before that, I did my Master’s degree in [Biomedical Engineering at Johns Hopkins University](https://www.bme.jhu.edu/) and my Bachelor’s degree in [Biological Science at Zhejiang University](http://www.cls.en.zju.edu.cn/).
+
+My research interests focus on the development of multi-omics analysis tools, and their applications in the real world. This includes developing user-friendly tools to simplify bioinformatics analysis, utilizing statistical methods to model high-throughput omics data, and identifing differential epigenetics biomarkers. My primary approaches involve software development, bioinformatics analysis, and machine learning.
+
+If you’re interested in my research or potential collaborations, feel free to drop me an e-mail!
 
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
