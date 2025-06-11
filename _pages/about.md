@@ -22,7 +22,7 @@ I’m a first-year PhD student in Biomedical and Health Informatics at [Case Wes
 My research interests focus on the development of multi-omics analysis tools, and their applications in the real world. This includes developing user-friendly tools to simplify bioinformatics analysis, utilizing statistical methods to model high-throughput omics data, and identifing differential epigenetics biomarkers. My primary approaches involve software development, bioinformatics analysis, and machine learning.
 
 If you’re interested in my research or potential collaborations, feel free to drop me an e-mail!
-
+<!--
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
 
 
@@ -60,3 +60,4 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 💻 Internships
 - *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+-->
